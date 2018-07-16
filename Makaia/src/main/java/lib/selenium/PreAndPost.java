@@ -80,7 +80,7 @@ public class PreAndPost extends WebDriverServiceImpl{
 	}
 	
 	
-	@DataProvider(name="UAT",indices=0)
+	@DataProvider(name="UAT")
 	public String[][] getdata() throws IOException{
 		ReadExcel excel=new ReadExcel();
 		String [][] data=excel.readExcel(excelFileName);
