@@ -34,7 +34,7 @@ public class PreAndPost extends WebDriverServiceImpl{
 		webdriver = new ChromeDriver();
 		driver = new EventFiringWebDriver(webdriver);
 		driver.register(this);
-		driver.manage().window().maximize();
+		driver.manage().window().fullscreen();
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		type(locateElement("id", "username"), uName);	
