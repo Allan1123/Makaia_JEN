@@ -30,7 +30,7 @@ public class PreAndPost extends WebDriverServiceImpl{
 		test.assignCategory(category);
 		
 		
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", ".Makaia/drivers/chromedriver");
 		webdriver = new ChromeDriver();
 		driver = new EventFiringWebDriver(webdriver);
 		driver.register(this);
