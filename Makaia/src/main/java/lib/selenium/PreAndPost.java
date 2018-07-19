@@ -23,7 +23,7 @@ public class PreAndPost extends WebDriverServiceImpl{
 	
 	@Parameters({"URL","userName","pass"})
 	@BeforeMethod
-	public void beforeMethod(String url,String uName,String pwd) {
+	public void beforeMethod(String url,String uName,String pwd) throws InterruptedException {
 		//for reports
 		startTestModule(nodeName);
 		test.assignAuthor(authorName);
@@ -35,6 +35,7 @@ public class PreAndPost extends WebDriverServiceImpl{
 		driver = new EventFiringWebDriver(webdriver);
 		driver.register(this);
 		driver.manage().window().fullscreen();
+		Thread.sleep(4000);
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		type(locateElement("id", "username"), uName);	
